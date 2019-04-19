@@ -5,11 +5,12 @@ window.onload=function(){
 document.getElementById('getQuote').click();
 }
 
-var prefix = "https://cors-anywhere.herokuapp.com/";
-var tweetLink = "https://twitter.com/intent/tweet?text=";
-var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+
+
 
 function getQuote() {
+    var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+    var prefix = "https://cors-anywhere.herokuapp.com/";
     fetch(prefix + quoteUrl, { cache: "no-store" })
         .then(function(resp) {
             return resp.json();
@@ -21,7 +22,7 @@ function getQuote() {
 
 function createTweet(input) {
     var data = input[0];
-
+    var tweetLink = "https://twitter.com/intent/tweet?text=";
     var dataElement = document.createElement('div');
     dataElement.innerHTML = data.content;
     var quoteText = dataElement.innerText.trim();
