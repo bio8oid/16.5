@@ -1,6 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Anton|Baloo|Dokdo|Luckiest+Guy|Monoton|Titan+One|Ubuntu:300,400,700,700i&subset=latin-ext");
+
 
 body {
   margin: 50px;
+  height: 100vh;
   text-align: center;
+  font-family: 'Ubuntu', cursive;
+  background-image: linear-gradient(to top, #8adc32, #25c7a2);
 }
 
+h1, h2, h3 {
+  margin: 100px auto;
+  color: #C3FFCA;
+  text-shadow: 8px 8px 40px #000;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  color: #34495e;
+}
+
+.trigger {
+  color: #C3FFCA;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #fb8332 0%, #f8c332 95%);
+  width: 300px;
+  box-shadow: 5px 5px 20px #190b14;
+}
+
+.trigger:hover {
+  background-image: linear-gradient(to top, #fb8332 0%, #f8c332 95%);
+}
+
+.tweet img{
+  margin: 50px;
+}
+
+.wiggle img:hover{ 
+  animation: wiggle 75ms infinite;
+  animation-timing-function: linear;   
+}
+
+@keyframes wiggle {
+  0% { transform: translate(2px, 0); }
+  50% { transform: translate(-2px, 0); }
+  100% { transform: translate(2px, 0); }
+}
