@@ -31,7 +31,6 @@
         document.querySelector('.quote').innerText = quoteText;
         document.querySelector('.author').innerText = "Author: " + quoteAuthor;
         document.querySelector('.tweet').setAttribute('href', tweet);
-
     }
     document.querySelector('.trigger').addEventListener('click', getQuote);
 })();
